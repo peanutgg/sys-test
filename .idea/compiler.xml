@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sys-log-filter" />
+        <module name="sys-gateway" />
+        <module name="sys-service-a" />
+        <module name="sys-websocket" />
+        <module name="sys-service-c" />
+        <module name="sys-practice" />
+        <module name="sys-eureka-server" />
+        <module name="sys-service-b" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="com.sys.test.service.b" target="1.8" />
+      <module name="sys-eureka-server" target="1.8" />
+      <module name="sys-gateway" target="1.8" />
+      <module name="sys-log-filter" target="1.8" />
+      <module name="sys-practice" target="1.8" />
+      <module name="sys-service-a" target="1.8" />
+      <module name="sys-service-b" target="1.8" />
+      <module name="sys-service-c" target="1.8" />
+      <module name="sys-test_git" target="1.8" />
+      <module name="sys-websocket" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="com.sys.test.service.b" options="-parameters" />
+      <module name="sys-eureka-server" options="-parameters" />
+      <module name="sys-gateway" options="-parameters" />
+      <module name="sys-log-filter" options="-parameters" />
+      <module name="sys-practice" options="-parameters" />
+      <module name="sys-service-a" options="-parameters" />
+      <module name="sys-service-b" options="-parameters" />
+      <module name="sys-service-c" options="-parameters" />
+      <module name="sys-websocket" options="-parameters" />
+    </option>
+  </component>
+</project>
