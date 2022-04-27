@@ -3,6 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <modules>
+        <module>sys-websocket</module>
+        <module>sys-test-service-a</module>
+        <module>sys-practice</module>
+        <module>sys-log-filter</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
