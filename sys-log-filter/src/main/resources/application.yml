@@ -1,0 +1,19 @@
+xxd:
+  name: 3333
+spring:
+  profiles:
+    active: dev
+---
+#################
+spring:
+  profiles: dev
+server:
+  port: 9090
+management:
+  endpoints:
+    enabled-by-default: true
+---
+spring:
+  profiles: prod
+server:
+  port: 9091
