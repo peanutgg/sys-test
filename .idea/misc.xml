@@ -12,6 +12,8 @@
         <option value="$PROJECT_DIR$/sys-test-service-a/pom.xml" />
         <option value="$PROJECT_DIR$/sys-test-service-b/pom.xml" />
         <option value="$PROJECT_DIR$/sys-service-c/pom.xml" />
+        <option value="$PROJECT_DIR$/sys-apollo/pom.xml" />
+        <option value="$PROJECT_DIR$/sys-log-filter-autoconfigure/pom.xml" />
       </list>
     </option>
   </component>

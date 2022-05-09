@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/sys-apollo/sys-apollo.iml" filepath="$PROJECT_DIR$/sys-apollo/sys-apollo.iml" />
       <module fileurl="file://$PROJECT_DIR$/sys-eureka-server/sys-eureka-server.iml" filepath="$PROJECT_DIR$/sys-eureka-server/sys-eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/sys-gateway/sys-gateway.iml" filepath="$PROJECT_DIR$/sys-gateway/sys-gateway.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sys-log-filter/sys-log-filter.iml" filepath="$PROJECT_DIR$/sys-log-filter/sys-log-filter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sys-log-filter-autoconfigure/sys-log-filter-autoconfigure.iml" filepath="$PROJECT_DIR$/sys-log-filter-autoconfigure/sys-log-filter-autoconfigure.iml" />
       <module fileurl="file://$PROJECT_DIR$/sys-practice/sys-practice.iml" filepath="$PROJECT_DIR$/sys-practice/sys-practice.iml" />
       <module fileurl="file://$PROJECT_DIR$/sys-service-a/sys-service-a.iml" filepath="$PROJECT_DIR$/sys-service-a/sys-service-a.iml" />
       <module fileurl="file://$PROJECT_DIR$/sys-service-b/sys-service-b.iml" filepath="$PROJECT_DIR$/sys-service-b/sys-service-b.iml" />
