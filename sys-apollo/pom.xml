@@ -16,10 +16,4 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>sys-apollo</name>
     <description>sys-apollo</description>
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
-    <dependencies>
-    </dependencies>
-
 </project>

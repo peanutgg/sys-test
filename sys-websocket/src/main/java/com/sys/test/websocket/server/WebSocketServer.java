@@ -1,6 +1,7 @@
 package com.sys.test.websocket.server;
 
-import com.alibaba.fastjson.JSONObject;
+import cn.hutool.json.JSONObject;
+import cn.hutool.json.JSONUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -36,7 +37,7 @@ public class WebSocketServer {
         Session session = sessionPools.get(openid);
         log.info("给[{}], session:{}", openid, session);
         try {
-            sendMessage(session, message.toJSONString());
+            sendMessage(session, JSONUtil.toJsonStr(message));
         }catch (Exception e){
             e.printStackTrace();
         }

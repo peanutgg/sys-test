@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="sys-apollo" />
+        <module name="sys-auth" />
         <module name="sys-log-filter-autoconfigure" />
         <module name="sys-gateway" />
         <module name="sys-service-a" />
@@ -21,6 +22,7 @@
     <bytecodeTargetLevel>
       <module name="com.sys.test.service.b" target="1.8" />
       <module name="sys-apollo" target="1.8" />
+      <module name="sys-auth" target="1.8" />
       <module name="sys-eureka-server" target="1.8" />
       <module name="sys-gateway" target="1.8" />
       <module name="sys-log-filter-autoconfigure" target="1.8" />
@@ -36,6 +38,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="com.sys.test.service.b" options="-parameters" />
       <module name="sys-apollo" options="-parameters" />
+      <module name="sys-auth" options="-parameters" />
       <module name="sys-eureka-server" options="-parameters" />
       <module name="sys-gateway" options="-parameters" />
       <module name="sys-log-filter-autoconfigure" options="-parameters" />

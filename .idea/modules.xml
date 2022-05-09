@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/sys-apollo/sys-apollo.iml" filepath="$PROJECT_DIR$/sys-apollo/sys-apollo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sys-auth/sys-auth.iml" filepath="$PROJECT_DIR$/sys-auth/sys-auth.iml" />
       <module fileurl="file://$PROJECT_DIR$/sys-eureka-server/sys-eureka-server.iml" filepath="$PROJECT_DIR$/sys-eureka-server/sys-eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/sys-gateway/sys-gateway.iml" filepath="$PROJECT_DIR$/sys-gateway/sys-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/sys-log-filter-autoconfigure/sys-log-filter-autoconfigure.iml" filepath="$PROJECT_DIR$/sys-log-filter-autoconfigure/sys-log-filter-autoconfigure.iml" />
