@@ -10,6 +10,14 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 1、客户端发出请求给网关获取令牌
+ * 2、网关收到请求，直接转发给授权服务
+ * 3、授权服务验证用户名、密码等一系列身份，通过则颁发令牌给客户端
+ * 4、客户端携带令牌请求资源，请求直接到了网关层
+ * 5、网关对令牌进行校验（验签、过期时间校验....）、
+ * 鉴权（对当前令牌携带的权限）和访问资源所需的权限进行比对，如果权限有交集则通过校验，直接转发给微服务
+ */
 @SpringBootApplication
 @RestController
 @EnableConfigurationProperties({GatewayApplication.UriConfiguration.class})
