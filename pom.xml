@@ -25,6 +25,7 @@
         <module>sys-apollo</module>
         <module>sys-auth</module>
         <module>sys-common</module>
+        <module>spitest</module>
     </modules>
 
 
