@@ -4,6 +4,7 @@ import com.netflix.hystrix.strategy.concurrency.HystrixRequestContext;
 import com.sys.test.service.a.entity.UserInfo;
 import com.sys.test.service.a.hystrix.request.merge.UserCollapseCommand;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.concurrent.Future;
@@ -45,5 +46,9 @@ public class HystrixTestController {
             context.close();
         }
 
+    }
+    @RequestMapping("/rateTest")
+    public String testRate(){
+        return "ok";
     }
 }

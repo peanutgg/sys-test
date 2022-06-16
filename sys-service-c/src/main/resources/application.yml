@@ -1,14 +1,8 @@
 server:
-  port: 8881
-
+  port: 8883
 spring:
-  datasource:
-    hikari:
-      jdbc-url: jdbc:mysql://localhost:3306/test
-      username: root
-      password: 123456
   application:
-    name: service-a
+    name: service-c
 
 eureka:
   instance:
@@ -18,5 +12,5 @@ eureka:
     register-with-eureka: true #false表示不向注册中心注册自己。
     fetch-registry: true #false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
     service-url:
-      defaultZone: http://localhost:8761/eureka/ #单机版服务注册中心
-
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #单机版服务注册中心
+      defaultZone: http://localhost:8761/eureka/ #单

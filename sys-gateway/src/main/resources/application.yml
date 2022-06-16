@@ -1,8 +1,67 @@
 server:
-  port: 8080
+  port: 9999
+
 spring:
   application:
     name: t-gateway
 
+  datasource:
+      url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+
+  redis:
+    host: 192.168.2.103
+    port: 6379
+
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]': # 匹配所有请求
+            allowedOrigins: "*" #跨域处理 允许所有的域
+            allowedMethods: # 支持的方法
+            - GET
+            - POST
+            - PUT
+            - DELETE
+      routes:
+        - id: service-a
+          uri: lb://service-a
+          predicates:
+          - Path=/service-a/**
+          filters:
+          - StripPrefix= 1
+          - name: RequestRateLimiter #请求数限流 名字不能随便写
+            args:
+              key-resolver: "#{@ipKeyResolver}"
+              redis-rate-limiter.replenishRate: 3 #令牌桶每秒填充平均速率
+              redis-rate-limiter.burstCapacity: 3 #令牌桶总容量
+
+        - id: service-b
+          uri: lb://service-b
+          predicates:
+          - Path=/service-b/**
+          filters:
+          - StripPrefix= 1
+
+        - id: service-c
+          uri: lb://service-c
+          predicates:
+          - Path=/service-c/**
+          filters:
+          - StripPrefix= 1
+
 fallback:
   uri: /fallback2
+
+eureka:
+  instance:
+    hostname: eureka-server #eureka服务端的实例名称，
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true #false表示不向注册中心注册自己。
+    fetch-registry: true #false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/ #单机版服务注册中心
