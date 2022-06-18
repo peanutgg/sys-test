@@ -1,26 +1,40 @@
 package test.TwentyTwentyOne;
 
+import java.util.ArrayList;
 import java.util.Stack;
 
 public class StackLIFO {
 
 
     public static void main(String[] args) {
+        ArrayList<Integer> a = new ArrayList<>();
 
 
-        Stack<Character> t = new Stack<>();
-        String s = "(){}[]";
-        for (int i = 0; i < s.length(); i++) {
-            Character c = s.charAt(i);
+        a.add(1);
+        a.add(1);
+        a.add(1);
+        a.add(1);
+        a.add(1);
+        a.add(1);
+        a.add(1);
+        a.add(1);
+        a.add(1);
+        a.add(1);
+        a.add(1);
+        a.add(1);
+        a.add(1);
+        a.add(1);
+        a.add(1);
+        a.add(1);
+        a.add(1);
+        a.add(1);
 
-            if(c=='('){
-                t.push(c);
-            }
-            
+
+        a.parallelStream().
+                forEach(
+                System.out::println
+        );
 
 
-
-
-        }
     }
 }

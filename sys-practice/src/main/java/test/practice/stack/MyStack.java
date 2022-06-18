@@ -9,7 +9,8 @@ public class MyStack<T> implements Stack<T> {
 
     private Object[] elements;
     private static final int INITIAL_SIZE = 12;
-    protected AtomicInteger index = new AtomicInteger();// 《《包 子类 本类可以访问   仅次于public》》    default 包 本类  可以访问   private  自己
+    protected AtomicInteger index = new AtomicInteger();// 《《包 子类 本类可以访问   仅次于public》》
+    // default 包 本类  可以访问   private  自己
 
     @Override
     public void push(T t) {
