@@ -26,6 +26,8 @@
         <module>sys-auth</module>
         <module>sys-common</module>
         <module>spitest</module>
+        <module>sys-rabbitmq-test</module>
+        <module>sys-kafka-test</module>
     </modules>
 
 

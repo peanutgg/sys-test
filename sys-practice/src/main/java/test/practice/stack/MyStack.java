@@ -9,7 +9,8 @@ public class MyStack<T> implements Stack<T> {
 
     private Object[] elements;
     private static final int INITIAL_SIZE = 12;
-    protected AtomicInteger index = new AtomicInteger();// ¡¶¡¶°ü ×ÓÀà ±¾Àà¿ÉÒÔ·ÃÎÊ   ½ö´ÎÓÚpublic¡·¡·    default °ü ±¾Àà  ¿ÉÒÔ·ÃÎÊ   private  ×Ô¼º
+    protected AtomicInteger index = new AtomicInteger();// ã€Šã€ŠåŒ… å­ç±» æœ¬ç±»å¯ä»¥è®¿é—®   ä»…æ¬¡äºpublicã€‹ã€‹
+    // default åŒ… æœ¬ç±»  å¯ä»¥è®¿é—®   private  è‡ªå·±
 
     @Override
     public void push(T t) {
