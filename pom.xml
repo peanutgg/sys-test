@@ -28,6 +28,7 @@
         <module>spitest</module>
         <module>sys-rabbitmq-test</module>
         <module>sys-kafka-test</module>
+        <module>netty-server-test</module>
     </modules>
 
 
