@@ -30,7 +30,8 @@ public class NettyChatClient {
             bootstrap = new Bootstrap();
             /*默认线程数 cup*2*/
             workerGroup = new NioEventLoopGroup();
-            bootstrap.group(workerGroup).channel(NioSocketChannel.class)
+            bootstrap.group(workerGroup)
+                    .channel(NioSocketChannel.class) 
                     .option(ChannelOption.CONNECT_TIMEOUT_MILLIS,3000)
                     .handler(new ChannelInitializer<SocketChannel>() {
                         @Override
