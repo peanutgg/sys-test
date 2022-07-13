@@ -7,6 +7,7 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
+import rpc.provider.handler.NettyServerHandler;
 
 /**
  * @author: 橘子
@@ -37,7 +38,7 @@ public class NettyRpcServer {
                         ChannelPipeline pipeline = ch.pipeline();
                         pipeline.addLast(new StringDecoder())
                                 .addLast(new StringEncoder())
-                                .addLast(null);
+                                .addLast(new NettyServerHandler());
                         // TODO: 2022/7/12 handler
                     }
                 });

@@ -33,6 +33,7 @@
         <module>rpc-api</module>
         <module>sys-rpc/rpc-provider</module>
         <module>sys-rpc/rpc-consumer</module>
+        <module>sys-juc-test</module>
     </modules>
 
 
