@@ -10,6 +10,12 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
+import rpc.handler.NettyRpcHandler;
+
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 /**
  * @author: 橘子
@@ -19,17 +25,25 @@ public class NettyRpcClient {
     private String ip;
     private int port;
     private NioEventLoopGroup workerGroup;
-    private Bootstrap clientBootStrap;
+    ExecutorService executorService = Executors.newCachedThreadPool();
+    /**
+     * 每个请求一个handler
+     */
+    private NettyRpcHandler nettyRpcHandler = new NettyRpcHandler();
+
 
     public NettyRpcClient(String ip, int port) {
         this.ip = ip;
         this.port = port;
+        initialize();
     }
 
-    public void run() {
+    public void initialize() {
+        Bootstrap clientBootStrap;
         try {
             workerGroup = new NioEventLoopGroup();
             clientBootStrap = new Bootstrap();
+
             clientBootStrap.group(workerGroup)
                     .channel(NioSocketChannel.class)
                     .option(ChannelOption.SO_KEEPALIVE, Boolean.TRUE)
@@ -63,5 +77,10 @@ public class NettyRpcClient {
             workerGroup.shutdownGracefully();
         }
     }
-    
+
+    public String send(String msg) throws ExecutionException, InterruptedException {
+        nettyRpcHandler.setReqMsg(msg);
+        Future<String> f = executorService.submit(nettyRpcHandler);
+        return f.get();
+    }
 }
