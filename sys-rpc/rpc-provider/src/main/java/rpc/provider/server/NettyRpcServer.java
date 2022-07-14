@@ -39,7 +39,6 @@ public class NettyRpcServer {
                         pipeline.addLast(new StringDecoder())
                                 .addLast(new StringEncoder())
                                 .addLast(new NettyServerHandler());
-                        // TODO: 2022/7/12 handler
                     }
                 });
 

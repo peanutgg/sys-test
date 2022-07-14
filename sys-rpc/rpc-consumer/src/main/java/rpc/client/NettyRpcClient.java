@@ -10,7 +10,7 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
-import rpc.handler.NettyRpcHandler;
+import rpc.handler.NettyRpcClientHandler;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
@@ -29,7 +29,7 @@ public class NettyRpcClient {
     /**
      * 每个请求一个handler
      */
-    private NettyRpcHandler nettyRpcHandler = new NettyRpcHandler();
+    private NettyRpcClientHandler nettyRpcHandler = new NettyRpcClientHandler();
 
 
     public NettyRpcClient(String ip, int port) {
@@ -54,7 +54,7 @@ public class NettyRpcClient {
                             ChannelPipeline pipeline = ch.pipeline();
                             pipeline.addLast(new StringDecoder())
                                     .addLast(new StringEncoder())
-                                    .addLast(null);
+                                    .addLast(new NettyRpcClientHandler());
                             // TODO: 2022/7/14 add client Handler
                         }
                     });
