@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
+``import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class ExecutorPoolDemo {
     private int coreSize;
@@ -13,6 +15,11 @@ public class ExecutorPoolDemo {
     public static final int READY = 0;
     public static final int RUNNING = -1;
     public static final int STOP = 1;
+    public int maxCoreSize;
+    private final ReentrantLock takeLock = new ReentrantLock();
+    private final Condition notEmpty = takeLock.newCondition();
+    private final ReentrantLock putLock = new ReentrantLock();
+    private final Condition notFull = putLock.newCondition();
 
     public static enum RunState {
         READY,
@@ -21,13 +28,14 @@ public class ExecutorPoolDemo {
         ;
     }
 
+
     private final class Worker implements Runnable {
         private int state = 0;
         private Thread thread;
         private Runnable task;
         private int completeTasks = 0;
 
-        public Worker(int state, Thread worker, Runnable task) {
+        public Worker(int state, Runnable task) {
             this.state = READY;
             this.task = task;
             this.thread = new Thread(this);
@@ -35,9 +43,8 @@ public class ExecutorPoolDemo {
 
         @Override
         public void run() {
-            runWorker(task);
+            runWorker(this);
         }
-
 
         public int getState() {
             return state;
@@ -69,17 +76,19 @@ public class ExecutorPoolDemo {
         this.keepAliveTime = keepAliveTime;
     }
 
-    public void init() {
-        for (int i = 0; i < coreSize; i++) {
-            workers.add(new Worker(0, new Thread(), null));
-        }
-    }
-
     public void execute(Runnable task) {
-        tasks.add(task);
-        for (int i = 0; i < workers.size(); i++) {
+        putLock.lock();
+        try {
 
+        } finally {
+            putLock.unlock();
         }
+
+        tasks.add(task);
+        if (coreSize < maxCoreSize) {
+            workers.add(new Worker(READY, task));
+        }
+
     }
 
     public void runWorker(Worker woker) {
