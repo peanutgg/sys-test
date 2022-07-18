@@ -29,6 +29,7 @@ public class OddEvenNumberPrint {
                         try {
                             System.out.println("t1 wait");
                             c1.await();
+                            System.out.println("t1 被唤醒");
 //                            lock.wait();
                         } catch (InterruptedException e) {
                             e.printStackTrace();
@@ -57,6 +58,7 @@ public class OddEvenNumberPrint {
                         try {
                             System.out.println("t2 wait");
                             c1.await();
+                            System.out.println("t2 被唤醒");
 //                            lock.wait();
                         } catch (InterruptedException e) {
                             e.printStackTrace();
