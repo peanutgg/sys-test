@@ -14,10 +14,10 @@ public class OddEvenNumberPrint {
         Condition c1 = rlock.newCondition();
         Semaphore tk = new Semaphore(1);
         t1 = new Thread(() -> {
-            rlock.lock();
 //            synchronized (lock) {
-                System.out.println("t1获得锁开始执行");
             try {
+                rlock.lock();
+                System.out.println("t1获得锁开始执行");
                 while (i[0] < 100) {
                     if (i[0] % 2 == 1) {
                         System.out.println(i[0] + "\r");
@@ -43,9 +43,9 @@ public class OddEvenNumberPrint {
             }
         });
         t2 = new Thread(() -> {
-            rlock.lock();
 //            synchronized (lock) {
             try {
+                rlock.lock();
                 System.out.println("t2获得锁开始执行");
                 while (i[0] < 100) {
                     if (i[0] % 2 == 0) {
