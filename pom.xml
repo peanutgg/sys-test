@@ -35,6 +35,7 @@
         <module>sys-rpc/rpc-consumer</module>
         <module>sys-juc-test</module>
         <module>sys-executor-pool</module>
+        <module>sys-designmode-test</module>
     </modules>
 
 

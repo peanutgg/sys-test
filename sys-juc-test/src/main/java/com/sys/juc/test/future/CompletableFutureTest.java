@@ -1,4 +1,4 @@
-package com.sys.juc.test;
+package com.sys.juc.test.future;
 
 import java.util.ArrayList;
 import java.util.Collection;
