@@ -27,10 +27,9 @@
         <module>sys-common</module>
         <module>spitest</module>
         <module>sys-rabbitmq-test</module>
-        <module>sys-kafka-test</module>
+<!--        <module>sys-kafka-test</module>-->
         <module>netty-server-test</module>
         <module>sys-rpc</module>
-        <module>rpc-api</module>
         <module>sys-rpc/rpc-provider</module>
         <module>sys-rpc/rpc-consumer</module>
         <module>sys-juc-test</module>
