@@ -28,11 +28,10 @@
         <module>spitest</module>
         <module>sys-rabbitmq-test</module>
 <!--        <module>sys-kafka-test</module>-->
-        <module>netty-server-test</module>
-        <module>sys-rpc</module>
-        <module>sys-rpc/rpc-provider</module>
-        <module>sys-rpc/rpc-consumer</module>
-        <module>sys-juc-test</module>
+<!--        <module>netty-server-test</module>-->
+<!--        <module>sys-rpc/rpc-provider</module>-->
+<!--        <module>sys-rpc/rpc-consumer</module>-->
+<!--        <module>sys-juc-test</module>-->
         <module>sys-executor-pool</module>
         <module>sys-designmode-test</module>
         <module>sys-rocketmq</module>
@@ -111,10 +110,10 @@
             <version>3.1.1</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
+<!--        </dependency>-->
     </dependencies>
     <dependencyManagement>
         <dependencies>
