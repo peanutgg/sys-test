@@ -27,15 +27,16 @@
         <module>sys-common</module>
         <module>spitest</module>
         <module>sys-rabbitmq-test</module>
-<!--        <module>sys-kafka-test</module>-->
-<!--        <module>netty-server-test</module>-->
-<!--        <module>sys-rpc/rpc-provider</module>-->
-<!--        <module>sys-rpc/rpc-consumer</module>-->
-<!--        <module>sys-juc-test</module>-->
+        <!--        <module>sys-kafka-test</module>-->
+        <!--        <module>netty-server-test</module>-->
+        <!--        <module>sys-rpc/rpc-provider</module>-->
+        <!--        <module>sys-rpc/rpc-consumer</module>-->
+        <!--        <module>sys-juc-test</module>-->
         <module>sys-executor-pool</module>
         <module>sys-designmode-test</module>
         <module>sys-rocketmq</module>
         <module>sys-flowable</module>
+        <module>sys-aop-test</module>
     </modules>
 
 
@@ -95,26 +96,26 @@
             <artifactId>hutool-all</artifactId>
             <version>5.7.20</version>
         </dependency>
-        <dependency>
-            <groupId>com.zaxxer</groupId>
-            <artifactId>HikariCP</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.23</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.1.1</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.zaxxer</groupId>-->
+<!--            <artifactId>HikariCP</artifactId>-->
+<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>mysql</groupId>-->
+        <!--            <artifactId>mysql-connector-java</artifactId>-->
+        <!--            <version>8.0.23</version>-->
+        <!--        </dependency>-->
 
 <!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
+<!--            <groupId>com.baomidou</groupId>-->
+<!--            <artifactId>mybatis-plus-boot-starter</artifactId>-->
+<!--            <version>3.1.1</version>-->
 <!--        </dependency>-->
+
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.cloud</groupId>-->
+        <!--            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
+        <!--        </dependency>-->
     </dependencies>
     <dependencyManagement>
         <dependencies>
@@ -132,13 +133,13 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-<!--            <dependency>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-dependencies</artifactId>-->
-<!--                <version>${spring-boot.version}</version>-->
-<!--                <type>pom</type>-->
-<!--                <scope>import</scope>-->
-<!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>org.springframework.boot</groupId>-->
+            <!--                <artifactId>spring-boot-dependencies</artifactId>-->
+            <!--                <version>${spring-boot.version}</version>-->
+            <!--                <type>pom</type>-->
+            <!--                <scope>import</scope>-->
+            <!--            </dependency>-->
 
         </dependencies>
     </dependencyManagement>
