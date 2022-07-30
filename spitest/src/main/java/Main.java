@@ -8,6 +8,7 @@ import java.util.ServiceLoader;
  */
 public class Main {
     public static void main(String[] args) {
+        //获取所有的provider
         ServiceLoader<Say> says = ServiceLoader.load(Say.class);
         says.forEach(s->{
             s.say();});
