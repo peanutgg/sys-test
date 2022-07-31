@@ -19,5 +19,6 @@ public class NettyServerApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         new NettyRpcServer("127.0.0.1", 9999).run();
+        this.getClass().getDeclaredAnnotations();
     }
 }
