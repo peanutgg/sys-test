@@ -1,6 +1,6 @@
 package com.example.demo.Filter.InportAutoConfiguration.annotations;
 
-import com.example.demo.Filter.InportAutoConfiguration.clas.LogFilterAutoConfiguration;
+import com.example.demo.Filter.ImportSelector.EnableLogFilterImportSelector;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.ElementType;
@@ -13,7 +13,7 @@ import java.lang.annotation.Target;
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-@Import(LogFilterAutoConfiguration.class)
+@Import(EnableLogFilterImportSelector.class)
 public @interface EnableLogFilter {
 
 }
