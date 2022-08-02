@@ -9,20 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>sys-aop-test</artifactId>
-    <dependencies>
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>1.9.6</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.sys.test</groupId>
-            <artifactId>sys-log-filter-autoconfigure</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
+    <artifactId>sys-spring-boot-data-flowable-starter</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

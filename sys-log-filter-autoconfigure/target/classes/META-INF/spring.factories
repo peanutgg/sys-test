@@ -1,2 +1,5 @@
-com.example.EnableLogFilter=\
-com.example.LogFilterAutoConfiguration
+#com.example.demo.Filter.InportAutoConfiguration.annotations.EnableLogFilter=\
+#com.example.demo.Filter.InportAutoConfiguration.clas.LogFilterAutoConfiguration
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.example.demo.Filter.InportAutoConfiguration.clas.LogFilterAutoConfiguration

@@ -1,13 +1,18 @@
 package com.sys.test.aop;
 
+import com.example.demo.Filter.InportAutoConfiguration.annotations.EnableLogFilter;
 import org.springframework.beans.BeansException;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
+@RestController
+@EnableLogFilter
 public class AopTestApplication implements CommandLineRunner, ApplicationContextAware {
     ApplicationContext applicationContext;
 
@@ -26,5 +31,10 @@ public class AopTestApplication implements CommandLineRunner, ApplicationContext
         messageQueueInfo.testAop1();
         System.out.println("----------------");
         messageQueueInfo.testAop2();
+    }
+
+    @RequestMapping("/rateTest")
+    public String testRate(){
+        return "ok";
     }
 }

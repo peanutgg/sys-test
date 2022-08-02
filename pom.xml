@@ -37,6 +37,7 @@
         <module>sys-rocketmq</module>
         <module>sys-flowable</module>
         <module>sys-aop-test</module>
+<!--        <module>sys-spring-boot-data-flowable-starter</module>-->
     </modules>
 
 
