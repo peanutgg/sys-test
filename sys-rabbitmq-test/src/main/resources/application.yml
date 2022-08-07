@@ -1,8 +1,0 @@
-#  我们可以只部署一个消费者实例，然后设置 RabbitMQ 每次只推送一个消息，再开启手动 ack 即可，配置如下
-#  这样 RabbitMQ 每次只会从队列推送一个消息过来，处理完成之后我们 ack 回应，再消费下一个，就能确保消息顺序性
-#  spring:0
-#  rabbitmq:
-#    listener:
-#      simple:
-#        prefetch: 1 #每次只推送一个消息
-#        acknowledge-mode: manual

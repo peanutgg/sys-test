@@ -22,12 +22,9 @@
         <module>sys-service-b</module>
         <module>sys-service-c</module>
         <module>sys-log-filter-autoconfigure</module>
-        <module>sys-apollo</module>
         <module>sys-auth</module>
         <module>sys-common</module>
         <module>spitest</module>
-        <module>sys-rabbitmq-test</module>
-        <!--        <module>sys-kafka-test</module>-->
         <!--        <module>netty-server-test</module>-->
         <!--        <module>sys-rpc/rpc-provider</module>-->
         <!--        <module>sys-rpc/rpc-consumer</module>-->
@@ -35,9 +32,9 @@
         <module>sys-executor-pool</module>
         <module>sys-designmode-test</module>
         <module>sys-rocketmq</module>
-        <module>sys-flowable</module>
         <module>sys-aop-test</module>
-<!--        <module>sys-spring-boot-data-flowable-starter</module>-->
+
+        <module>sys-classloader</module>
     </modules>
 
 

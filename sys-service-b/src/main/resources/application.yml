@@ -1,9 +1,18 @@
 server:
   port: 8882
-spring:
-  application:
-    name: service-b
 
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 123456
+
+  application:
+    name: service-a
+
+  redis:
+    host: 192.168.0.113
+    port: 6379
 eureka:
   instance:
     hostname: eureka-server #eureka服务端的实例名称，
@@ -13,3 +22,9 @@ eureka:
     fetch-registry: true #false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
     service-url:
       defaultZone: http://localhost:8761/eureka/ #单机版服务注册中心
+mybatis-plus:
+  configuration:
+    cache-enabled: true
+    use-generated-keys: true
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.sys.test.service.b.entity

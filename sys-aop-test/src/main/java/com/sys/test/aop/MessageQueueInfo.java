@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 public class MessageQueueInfo {
     @MessageQueueRequire1
     public void testAop1() {
+//        int a = 1 / 0;
         log.info("MessageQueueRequire1");
     }
 

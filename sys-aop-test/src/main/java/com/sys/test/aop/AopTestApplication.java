@@ -28,9 +28,9 @@ public class AopTestApplication implements CommandLineRunner, ApplicationContext
     @Override
     public void run(String... args) throws Exception {
         MessageQueueInfo messageQueueInfo = (MessageQueueInfo) applicationContext.getBean("messageQueueInfo");
-        messageQueueInfo.testAop1();
-        System.out.println("----------------");
         messageQueueInfo.testAop2();
+        System.out.println("----------------");
+        messageQueueInfo.testAop1();
     }
 
     @RequestMapping("/rateTest")
