@@ -1,4 +1,4 @@
-package com.sys.executor;
+package com.sys.juc.test.future;
 
 import lombok.Data;
 
