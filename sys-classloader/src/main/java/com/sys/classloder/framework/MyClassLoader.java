@@ -24,6 +24,7 @@ public class MyClassLoader extends URLClassLoader {
     @Override
     public void close() throws IOException {
         // TODO Auto-generated method stub
+        System.out.println("class loader卸载");
         super.close();
     }
     /**
