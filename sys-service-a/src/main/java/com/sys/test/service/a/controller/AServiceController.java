@@ -15,12 +15,15 @@ public class AServiceController {
     public String testRate() {
         return "ok";
     }
+
     @Autowired
     UserService userService;
+
     @RequestMapping("/user/add/{name}")
     public Integer addUser(@PathVariable("name") String name) {
         return userService.addUser(name);
     }
+
     @RequestMapping("/user/get/{id}")
     public List<UserInfo> addUser(@PathVariable("id") Integer id) {
         return userService.getUser(id);

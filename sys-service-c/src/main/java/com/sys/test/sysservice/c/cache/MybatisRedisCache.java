@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.connection.RedisServerCommands;
 import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
 import java.util.Set;
@@ -15,6 +16,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 
 @Slf4j
+@Component
 public class MybatisRedisCache implements Cache {
     // 读写锁
     private final ReadWriteLock readWriteLock = new ReentrantReadWriteLock(true);
