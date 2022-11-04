@@ -11,9 +11,9 @@ import java.io.IOException;
  */
 @SpringBootApplication
 @NacosPropertySource(dataId = "example", autoRefreshed = true)
-public class NacosServer8848 {
+public class NacosClientTest {
 
     public static void main(String[] args) throws IOException {
-        SpringApplication.run(NacosServer8848.class, args);
+        SpringApplication.run(NacosClientTest.class, args);
     }
 }
